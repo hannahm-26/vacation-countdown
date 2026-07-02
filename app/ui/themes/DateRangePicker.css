@@ -1,0 +1,76 @@
+@import './theme.css';
+@import './utilities.css';
+
+.react-aria-DateRangePicker {
+  color: var(--color-text);
+  max-width: 100%;
+
+  .react-aria-Group {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    min-width: 220px;
+    max-width: 100%;
+    height: var(--space-8);
+    box-sizing: border-box;
+    overflow: clip;
+    position: relative;
+    padding: 0 var(--space-1) 0 var(--space-3);
+    border-radius: var(--radius-md);
+    font-size: var(--text-base);
+    color: var(--color-text);
+    white-space: nowrap;
+    cursor: text;
+    background-color: var(--color-surface);
+
+    &[data-focus-within] {
+      outline: 2px solid var(--focus-ring-color);
+      outline-offset: -1px;
+    }
+
+    &[data-disabled] {
+      color: var(--text-color-disabled);
+    }
+  }
+
+  .date-fields {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    overflow-x: auto;
+    overflow-y: clip;
+    scrollbar-width: none;
+    border: 1px solid var(--color-border-soft);
+    border-radius: 12px;
+    padding: 2px 4px;
+    justify-items: center;
+  }
+
+  .field-Button {
+    margin-left: auto;
+  }
+
+  [slot='start'] ~ span {
+    padding: 0 4px;
+  }
+
+  [slot='end'] {
+    margin-right: 1.75rem;
+    flex: 1;
+  }
+
+  .react-aria-DateInput {
+    width: unset;
+    min-width: unset;
+    padding: unset;
+    border: unset;
+    box-shadow: none;
+    background: none;
+    height: auto;
+    line-height: normal;
+    &[data-focus-within] {
+      outline: unset;
+    }
+  }
+}
