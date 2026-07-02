@@ -1,4 +1,4 @@
 :HL["/vacation-countdown/_next/static/chunks/0b3_4y5yab7q2.css","style"]
-:HL["/vacation-countdown/_next/static/chunks/1isbaib1dcx0a.css","style"]
+:HL["/vacation-countdown/_next/static/chunks/3fn1je7o3nrgk.css","style"]
 :HL["/vacation-countdown/_next/static/media/f06bf9da926bae75-s.p.2874ccu1_u7jf.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"Koza2yo9C2cX2rscI-sW8"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"bqwmT_eqCL_Y1PHZMPNl0"}
