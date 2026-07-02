@@ -1,3 +1,3 @@
 :HL["/vacation-countdown/_next/static/chunks/2pllx1ovstjk0.css","style"]
 :HL["/vacation-countdown/_next/static/chunks/1isbaib1dcx0a.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"HftMeFl26NWKFF59N5m5D"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"LFjjfW4WwWxYVCiKOtuZN"}
