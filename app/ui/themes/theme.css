@@ -13,34 +13,33 @@
   --space-4: 1rem;
   --space-5: 1.25rem;
   --space-6: 1.5rem;
-    --space-7: 1.75rem;
+  --space-7: 1.75rem;
   --space-8: 2rem;
-    --space-9: 2.25rem;
-
+  --space-9: 2.25rem;
   --space-10: 2.5rem;
   --space-11: 2.75rem;
   --space-12: 3rem;
   --space-16: 4rem;
 
-  --color-bg: #f7f6f2;
-  --color-surface: #fbfbf8;
-  --color-surface-2: #f1eee7;
-  --color-border: #d7d2c7;
-  --color-text: #24211d;
-  --color-text-muted: #6e6b66;
-  --color-primary: #0d6c74;
-  --color-primary-hover: #0a565d;
-  --color-primary-soft: #d8ecec;
-  --color-success: #3d7a2d;
-  --color-warning: #b16a19;
-  --color-white: #ffffff;
+  --color-bg: oklch(0.973 0.006 95.6);
+  --color-surface: oklch(0.986 0.003 95.7);
+  --color-surface-2: oklch(0.948 0.011 93.8);
+  --color-border: oklch(0.868 0.013 89.7);
+  --color-text: oklch(0.253 0.009 67.3);
+  --color-text-muted: oklch(0.529 0.007 76.5);
+  --color-primary: oklch(0.499 0.078 204.2);
+  --color-primary-hover: oklch(0.416 0.063 205.1);
+  --color-primary-soft: oklch(0.933 0.021 197.4);
+  --color-success: oklch(0.543 0.116 135.1);
+  --color-warning: oklch(0.617 0.128 57.9);
+  --color-white: oklch(1 0 0);
 
-  --color-overlay-primary: color-mix(in srgb, var(--color-primary) 10%, transparent);
-  --color-border-soft: color-mix(in srgb, var(--color-text) 12%, transparent);
-  --color-border-softer: color-mix(in srgb, var(--color-text) 10%, transparent);
-  --color-divider-soft: color-mix(in srgb, var(--color-text) 8%, transparent);
+  --color-overlay-primary: color-mix(in oklch, var(--color-primary) 10%, transparent);
+  --color-border-soft: color-mix(in oklch, var(--color-text) 12%, transparent);
+  --color-border-softer: color-mix(in oklch, var(--color-text) 10%, transparent);
+  --color-divider-soft: color-mix(in oklch, var(--color-text) 8%, transparent);
 
-  --shadow-md: 0 18px 40px rgba(36, 33, 29, 0.08);
+  --shadow-md: 0 18px 40px oklch(0.253 0.009 67.3 / 0.08);
 
   --radius-md: 0.75rem;
   --radius-lg: 1rem;
@@ -51,36 +50,37 @@
   --font-body: "Instrument Sans", "Inter", sans-serif;
 
   --background-color: var(--color-bg);
-  --overlay-background: #ffffff;
-  --overlay-border: rgb(0 0 0 / 0.06);
-  --popover-shadow: 0 8px 20px rgba(0 0 0 / 0.12);
+  --overlay-background: oklch(1 0 0);
+  --overlay-border: oklch(0 0 0 / 0.06);
+  --popover-shadow: 0 8px 20px oklch(0 0 0 / 0.12);
 }
 
 [data-theme="dark"] {
-  --color-bg: #171614;
-  --color-surface: #1f1e1b;
-  --color-surface-2: #2a2824;
-  --color-border: #3b3833;
-  --color-text: #f2efe8;
-  --color-text-muted: #b3ada4;
-  --color-primary: #6cb6bd;
-  --color-primary-hover: #87c7cd;
-  --color-primary-soft: #23373a;
-  --color-success: #7dc96d;
-  --color-warning: #ebb26e;
+  --color-bg: oklch(0.187 0.004 67.8);
+  --color-surface: oklch(0.226 0.004 67.6);
+  --color-surface-2: oklch(0.284 0.006 67.9);
+  --color-border: oklch(0.365 0.008 67.9);
+  --color-text: oklch(0.949 0.010 84.8);
+  --color-text-muted: oklch(0.752 0.011 83.8);
+  --color-primary: oklch(0.749 0.077 200.2);
+  --color-primary-hover: oklch(0.807 0.059 198.0);
+  --color-primary-soft: oklch(0.332 0.028 201.0);
+  --color-success: oklch(0.775 0.143 136.0);
+  --color-warning: oklch(0.795 0.117 68.6);
 
-  --color-overlay-primary: color-mix(in srgb, var(--color-primary) 10%, transparent);
-  --color-border-soft: color-mix(in srgb, var(--color-text) 12%, transparent);
-  --color-border-softer: color-mix(in srgb, var(--color-text) 10%, transparent);
-  --color-divider-soft: color-mix(in srgb, var(--color-text) 8%, transparent);
+  --color-overlay-primary: color-mix(in oklch, var(--color-primary) 10%, transparent);
+  --color-border-soft: color-mix(in oklch, var(--color-text) 12%, transparent);
+  --color-border-softer: color-mix(in oklch, var(--color-text) 10%, transparent);
+  --color-divider-soft: color-mix(in oklch, var(--color-text) 8%, transparent);
 
-  --shadow-md: 0 18px 40px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 18px 40px oklch(0 0 0 / 0.35);
 
   --background-color: var(--color-bg);
-  --overlay-background: #1f1e1b;
-  --overlay-border: rgb(255 255 255 / 0.16);
-  --popover-shadow: 0 8px 20px rgba(0 0 0 / 0.5);
+  --overlay-background: oklch(0.226 0.004 67.6);
+  --overlay-border: oklch(1 0 0 / 0.16);
+  --popover-shadow: 0 8px 20px oklch(0 0 0 / 0.5);
 }
+
 :root {
   --focus-ring-color: var(--color-primary);
   --text-color: var(--color-text);

@@ -14,7 +14,12 @@ import { ThemeChecker } from "@/theme/ThemeChecker";
 import { ContentWrapper } from "@/ui/ContentWrapper";
 import { CountDaysTiles } from "@/CountDaysTiles";
 import { Text } from "@/ui/Content";
+import dynamic from "next/dynamic";
 
+const Countdown = dynamic(
+  () => import("@/ui/Countdown").then((mod) => mod.Countdown),
+  { ssr: false },
+);
 function countWorkingDays(startDate: Date, endDate: Date) {
   const cursor = new Date(startDate);
   let days = 0;
@@ -47,37 +52,38 @@ export default function Home() {
     control,
     name: "dateRange",
   });
-function countAllDays(startDate: Date, endDate: Date) {
-  const start = new Date(startDate);
-  const end = new Date(endDate);
+  function countAllDays(startDate: Date, endDate: Date) {
+    const start = new Date(startDate);
+    const end = new Date(endDate);
 
-  start.setHours(0, 0, 0, 0);
-  end.setHours(0, 0, 0, 0);
+    start.setHours(0, 0, 0, 0);
+    end.setHours(0, 0, 0, 0);
 
-  const diffInMs = end.getTime() - start.getTime();
-  return Math.round(diffInMs / (1000 * 60 * 60 * 24));
-}
-const workingDays = useMemo(() => {
-  if (!dateRange?.start || !dateRange?.end) return 0;
+    const diffInMs = end.getTime() - start.getTime();
+    return Math.round(diffInMs / (1000 * 60 * 60 * 24));
+  }
+  const workingDays = useMemo(() => {
+    if (!dateRange?.start || !dateRange?.end) return 0;
 
-  const startDate = dateRange.start.toDate(getLocalTimeZone());
-  const endDate = dateRange.end.toDate(getLocalTimeZone());
+    const startDate = dateRange.start.toDate(getLocalTimeZone());
+    const endDate = dateRange.end.toDate(getLocalTimeZone());
 
-  return countWorkingDays(startDate, endDate);
-}, [dateRange]);
+    return countWorkingDays(startDate, endDate);
+  }, [dateRange]);
 
   const onSubmit = (values: ValidationSchemaType) => {
     console.log("submitted values", values);
     console.log("working days estimate:", workingDays);
   };
-const allDays = useMemo(() => {
-  if (!dateRange?.start || !dateRange?.end) return null;
+  const allDays = useMemo(() => {
+    if (!dateRange?.start || !dateRange?.end) return null;
 
-  const startDate = dateRange.start.toDate(getLocalTimeZone());
-  const endDate = dateRange.end.toDate(getLocalTimeZone());
+    const startDate = dateRange.start.toDate(getLocalTimeZone());
+    const endDate = dateRange.end.toDate(getLocalTimeZone());
 
-  return countAllDays(startDate, endDate);
-}, [dateRange]);
+    return countAllDays(startDate, endDate);
+  }, [dateRange]);
+  const target = new Date("2026-09-06T14:00:00+02:00"); // CEST = UTC+2
 
   return (
     <div>
@@ -102,6 +108,8 @@ const allDays = useMemo(() => {
             />
           </ContentWrapper>
         </Form>
+        <Countdown date={target} />
+
         <div className="day-cards">
           <CountDaysTiles
             days={workingDays}
