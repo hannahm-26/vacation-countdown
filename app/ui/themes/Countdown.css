@@ -1,7 +1,6 @@
 .countdown {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.75rem;
   align-items: stretch;
 }
 
@@ -11,7 +10,7 @@
   align-items: center;
   justify-content: center;
   min-height: 5.5rem;
-  padding: 0.875rem;
+  padding: 0.2rem 0.5rem;
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
   background: var(--surface-raised);

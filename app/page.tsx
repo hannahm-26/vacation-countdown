@@ -108,7 +108,10 @@ export default function Home() {
             />
           </ContentWrapper>
         </Form>
+                  <ContentWrapper>
+
         <Countdown date={target} />
+          </ContentWrapper>
 
         <div className="day-cards">
           <CountDaysTiles
